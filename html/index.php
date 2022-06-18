@@ -85,12 +85,7 @@
 		    				echo "<pre>$shell_exec_output</pre>";
 							?>
 						</p>
-            <p>
-							<?php
-		    				echo "<pre>$shell_exec_output_sl</pre>";
-							?>
-						</p>
-					</div>
+          </div>
 				</div>
 			</div>
 		</section>
