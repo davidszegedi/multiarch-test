@@ -4,7 +4,7 @@
   $shell_exec_output_sl = str_replace("\r", " ", $shell_exec_output_sl);
   $arch_photo = 'none';
 	$find_arch = 'ARM';
-	if(strpos(json_encode($shell_exec_output_sl),$find_arch) !== false){
+	if(strpos($shell_exec_output_sl,$find_arch) !== false){
 		 $arch_photo = 'images/arm.png';
 	 } else {
 		 $arch_photo = 'images/x86.png';
