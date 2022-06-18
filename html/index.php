@@ -82,12 +82,12 @@
 						<h2 class="text-uppercase">Cpu Architecture details</h2>
 						<p>
 							<?php
-		    				echo "<pre>json_encode($shell_exec_output)</pre>";
+		    				echo "<pre>$shell_exec_output</pre>";
 							?>
 						</p>
             <p>
 							<?php
-		    				echo "<pre>json_encode($shell_exec_output_sl)</pre>";
+		    				echo "<pre>$shell_exec_output_sl</pre>";
 							?>
 						</p>
 					</div>
