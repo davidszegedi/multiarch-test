@@ -2,10 +2,10 @@
   $shell_exec_output = shell_exec('lscpu');
   $shell_exec_output_sl = str_replace("\n", " ", $shell_exec_output);
   $shell_exec_output_sl = str_replace("\r", " ", $shell_exec_output_sl);
-  $str_test = 'this is running on ARM processor'
+  $str_test = 'this is running on ARM processor';
   $arch_photo = 'none';
 	$find_arch = 'ARM';
-	if(strpos($shell_exec_output_sl,$find_arch) !== false){
+	if(strpos($str_test,$find_arch) !== false){
 		 $arch_photo = 'images/arm.png';
 	 } else {
 		 $arch_photo = 'images/x86.png';
