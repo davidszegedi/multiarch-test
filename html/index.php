@@ -1,8 +1,10 @@
 <?php
   $shell_exec_output = shell_exec('lscpu');
+  $shell_exec_output_sl = str_replace("\n", " ", $shell_exec_output);
+  $shell_exec_output_sl = str_replace("\r", " ", $shell_exec_output_sl);
   $arch_photo = 'none';
 	$find_arch = 'ARM';
-	if(strpos(json_encode($shell_exec_output),$find_arch) !== false){
+	if(strpos(json_encode($shell_exec_output_sl),$find_arch) !== false){
 		 $arch_photo = 'images/arm.png';
 	 } else {
 		 $arch_photo = 'images/x86.png';
@@ -81,6 +83,11 @@
 						<p>
 							<?php
 		    				echo "<pre>json_encode($shell_exec_output)</pre>";
+							?>
+						</p>
+            <p>
+							<?php
+		    				echo "<pre>json_encode($shell_exec_output_sl)</pre>";
 							?>
 						</p>
 					</div>
