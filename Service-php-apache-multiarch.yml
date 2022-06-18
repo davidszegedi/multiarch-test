@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  php-apache-multiarch
+spec:
+  selector:
+    app:  php-apache-multiarch
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache-multiarch
+spec:
+  selector:
+    matchLabels:
+      app: php-apache-multiarch
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: php-apache-multiarch
+    spec:
+      containers:
+        - name: php-apache-multiarch
+          image: >-
+            quay.io/dszegedi/php-apache-multiarch:v0.7
+          ports:
+            - containerPort: 80
+              protocol: TCP
