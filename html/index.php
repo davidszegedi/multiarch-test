@@ -4,7 +4,7 @@
   $shell_exec_output_sl = str_replace("\r", "-", $shell_exec_output_sl);
   $shell_exec_output_sl = str_replace(" ", "-", $shell_exec_output_sl);
   $arch_photo = 'none';
-	$find_arch = 'intel';
+	$find_arch = 'Intel';
 	if(strpos($shell_exec_output_sl,$find_arch) !== false){
 		 $arch_photo = 'images/x86.png';
 	 } else {
