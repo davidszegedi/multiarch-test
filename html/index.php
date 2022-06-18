@@ -4,11 +4,11 @@
   $shell_exec_output_sl = str_replace("\r", "-", $shell_exec_output_sl);
   $shell_exec_output_sl = str_replace(" ", "-", $shell_exec_output_sl);
   $arch_photo = 'none';
-	$find_arch = 'Intel';
+	$find_arch = 'ARM';
 	if(strpos($shell_exec_output_sl,$find_arch) !== false){
-		 $arch_photo = 'images/x86.png';
-	 } else {
 		 $arch_photo = 'images/arm.png';
+	 } else {
+		 $arch_photo = 'images/x86.png';
 	 }
 ?>
 <html lang="en">
@@ -84,11 +84,6 @@
 						<p>
 							<?php
 		    				echo "<pre>$shell_exec_output</pre>";
-							?>
-						</p>
-            <p>
-							<?php
-		    				echo "$arch_photo";
 							?>
 						</p>
           </div>
