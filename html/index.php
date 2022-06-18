@@ -2,7 +2,7 @@
   $shell_exec_output = shell_exec('lscpu');
   $arch_photo = 'none';
 	$find_arch = 'ARM';
-	if(strpos($shell_exec_output,$find_arch) !== false){
+	if(strpos(json_encode($shell_exec_output),$find_arch) !== false){
 		 $arch_photo = 'images/arm.png';
 	 } else {
 		 $arch_photo = 'images/x86.png';
